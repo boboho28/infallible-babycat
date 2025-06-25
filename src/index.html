@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Input Event Scatter</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h2>Form Input Event Scatter</h2>
+      <button id="addNewDataButton">Tambah Data Baru</button>
+      <div
+        id="inputForm"
+        style="
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      >
+        <div class="input-modal-content">
+          <h3>Tambah Data Baru</h3>
+          <div class="form-group">
+            <label for="tanggal">Tanggal</label>
+            <input type="date" id="tanggal" placeholder="Tanggal" />
+          </div>
+          <div class="form-group">
+            <label for="periode">Periode</label>
+            <input type="text" id="periode" placeholder="Periode" />
+          </div>
+          <div class="form-group">
+            <label for="userId">User ID</label>
+            <input type="text" id="userId" placeholder="User ID" />
+          </div>
+          <div class="form-group">
+            <label for="betting">Betting</label>
+            <input type="number" id="betting" placeholder="Betting" />
+          </div>
+          <div class="form-group">
+            <label for="scatter">Scatter</label>
+            <select id="scatter">
+              <option value="">Pilih Scatter</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="form-group" style="display: flex; gap: 10px">
+            <div style="flex: 1">
+              <label for="lampiran1">Link 1</label>
+              <input
+                type="text"
+                id="lampiran1"
+                placeholder="Link 1 (URL Gambar)"
+              />
+            </div>
+            <div style="flex: 1">
+              <label for="lampiran2">Link 2</label>
+              <input
+                type="text"
+                id="lampiran2"
+                placeholder="Link 2 (URL Gambar)"
+              />
+            </div>
+            <div style="flex: 1">
+              <label for="lampiran3">Link 3</label>
+              <input
+                type="text"
+                id="lampiran3"
+                placeholder="Link 3 (URL Gambar)"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status">
+              <option value="Semua">Semua</option>
+              <option value="Approved">Approved</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </div>
+          <div class="button-group">
+            <button id="saveButton">Simpan Data</button>
+            <button id="cancelInputButton">Batal</button>
+          </div>
+        </div>
+      </div>
+      <button id="filterButton">Tampilkan</button>
+      <button id="exportButton">Export Data CSV</button>
+      <div id="summary">
+        <h3>Total Hadiah Approved pada 2025-06-26: Rp 1,390,000</h3>
+        <p>Data Per Tanggal: 2025-06-26</p>
+      </div>
+      <table id="transactionTable"></table>
+      <div id="pagination" style="margin-top: 20px"></div>
+      <!-- Modal untuk Edit dengan Desain Berbeda -->
+      <div
+        id="editModal"
+        style="
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      >
+        <div class="edit-modal-content">
+          <h3>Edit Transaksi</h3>
+          <div class="form-group">
+            <label for="editTanggal">Tanggal</label>
+            <input type="date" id="editTanggal" placeholder="Tanggal" />
+          </div>
+          <div class="form-group">
+            <label for="editPeriode">Periode</label>
+            <input type="text" id="editPeriode" placeholder="Periode" />
+          </div>
+          <div class="form-group">
+            <label for="editUserId">User ID</label>
+            <input type="text" id="editUserId" placeholder="User ID" />
+          </div>
+          <div class="form-group">
+            <label for="editBetting">Betting</label>
+            <input type="number" id="editBetting" placeholder="Betting" />
+          </div>
+          <div class="form-group">
+            <label for="editScatter">Scatter</label>
+            <select id="editScatter">
+              <option value="">Pilih Scatter</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="form-group" style="display: flex; gap: 10px">
+            <div style="flex: 1">
+              <label for="editLampiran1">Link 1</label>
+              <input
+                type="text"
+                id="editLampiran1"
+                placeholder="Link 1 (URL Gambar)"
+              />
+            </div>
+            <div style="flex: 1">
+              <label for="editLampiran2">Link 2</label>
+              <input
+                type="text"
+                id="editLampiran2"
+                placeholder="Link 2 (URL Gambar)"
+              />
+            </div>
+            <div style="flex: 1">
+              <label for="editLampiran3">Link 3</label>
+              <input
+                type="text"
+                id="editLampiran3"
+                placeholder="Link 3 (URL Gambar)"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="editStatus">Status</label>
+            <select id="editStatus">
+              <option value="Semua">Semua</option>
+              <option value="Approved">Approved</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </div>
+          <div class="button-group">
+            <button id="saveEditButton">Simpan Perubahan</button>
+            <button id="cancelEditButton">Batal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.mjs" type="module"></script>
+  </body>
+</html>

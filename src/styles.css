@@ -1,0 +1,170 @@
+body {
+  font-family: sans-serif;
+  background: url("https://example.com/background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+button:hover {
+  background-color: #45a049;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #4caf50;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+#pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Styling for Input Modal */
+#inputForm {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.input-modal-content {
+  background: white;
+  padding: 25px; /* Increased padding for more space */
+  margin: 5% auto;
+  width: 500px; /* Increased width for larger box */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background-color: #f0f8ff;
+  text-align: left;
+  min-height: 400px; /* Added minimum height for better visibility */
+}
+.input-modal-content h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.input-modal-content .form-group {
+  margin-bottom: 15px;
+}
+.input-modal-content input,
+.input-modal-content select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.input-modal-content #cancelInputButton {
+  background-color: #ff4444;
+}
+.input-modal-content #cancelInputButton:hover {
+  background-color: #cc0000;
+}
+
+/* Styling for Edit Modal */
+#editModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.edit-modal-content {
+  background: white;
+  padding: 20px;
+  margin: 5% auto;
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background-color: #e6f3ff;
+  text-align: left;
+}
+.edit-modal-content h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.edit-modal-content .form-group {
+  margin-bottom: 15px;
+}
+.edit-modal-content input,
+.edit-modal-content select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.edit-modal-content #cancelEditButton {
+  background-color: #ff4444;
+}
+.edit-modal-content #cancelEditButton:hover {
+  background-color: #cc0000;
+}
